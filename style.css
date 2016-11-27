@@ -1,0 +1,243 @@
+body, html {
+  background-color: lightgrey; }
+
+#game {
+  box-shadow: 0 0 10pt 5pt #333333;
+  background-color: black; }
+  #game div {
+    position: relative; }
+  #game #color1 {
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    z-index: 1; }
+  #game #color2 {
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    z-index: 1; }
+  #game #color3 {
+    background-color: yellow;
+    display: inline-block;
+    position: relative;
+    z-index: 1; }
+  #game #color4 {
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    z-index: 1; }
+
+#centerDisk {
+  z-index: 4;
+  background-color: black;
+  position: absolute;
+  display: block;
+  box-shadow: 0 0 5pt 3pt; }
+
+#footer {
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: grey; }
+
+@media only screen and (min-width: 320px) {
+  #game {
+    margin-top: 25vh;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 49vw;
+      height: 49vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 2pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 2pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -11vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -11vh; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -11vh auto 0 auto; } }
+@media only screen and (min-width: 375px) {
+  #game {
+    margin-top: 20vh;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 49vw;
+      height: 49vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 2pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 2pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -13vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -13vh; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -13vh auto 0 auto; } }
+@media only screen and (min-width: 425px) {
+  #game {
+    width: 90vw;
+    height: 90vw;
+    border-radius: 100vh;
+    margin: 20vh auto 0 auto; }
+    #game div {
+      width: 44vw;
+      height: 44vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 2pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 2pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -14vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -14vh; }
+
+  #centerDisk {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50vw;
+    margin: -13vh auto 0 auto; } }
+@media only screen and (min-width: 768px) {
+  #game {
+    margin-top: 10vh;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 29vw;
+      height: 29vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 4pt;
+      margin-left: 2pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 4pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -15vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -15vh;
+      margin-left: 2pt; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -16vh auto 0 auto; } }
+@media only screen and (min-width: 1024px) {
+  #game {
+    margin-top: 10vh;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 29vw;
+      height: 29vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 4pt;
+      margin-left: 4pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 4pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -15vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -15vh;
+      margin-left: 4pt; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -16vh auto 0 auto; } }
+@media only screen and (min-width: 1420px) {
+  #game {
+    margin-top: 10vh;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 24vw;
+      height: 24vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 6pt;
+      margin-left: 6pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 6pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -16vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -16vh;
+      margin-left: 6pt; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -17vh auto 0 auto; } }
+@media only screen and (min-width: 2560px) {
+  #game {
+    margin-top: 10vh;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 100vh; }
+    #game div {
+      width: 24vw;
+      height: 24vw; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0;
+      margin-top: 20pt;
+      margin-left: 15pt; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0;
+      margin-top: 20pt; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -16vh; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -16vh;
+      margin-left: 15pt; }
+
+  #centerDisk {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50vw;
+    margin: -15vh auto 0 auto; } }
+
+/*# sourceMappingURL=style.css.map */
