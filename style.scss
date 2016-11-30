@@ -1,43 +1,78 @@
-$MobileS: 320px;
-$MobileM: 375px;
-$MobileL: 425px;
-$Tablet: 768px;
-$Laptop: 1024px;
-$LaptopL: 1420px;
-$FourK: 2560px;
+$MobileS: 320pt;
+$MobileM: 375pt;
+$MobileL: 425pt;
+$Tablet: 768pt;
+$Laptop: 1024pt;
+$LaptopL: 1420pt;
+$FourK: 2560pt;
 
 body, html {
 	background-color: lightgrey;
 }
+#button {
+	background-color: #16a085;
+	width: 100pt;
+	height: 40pt;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	padding-top: 10pt;
+}
 #game {
+	width: $MobileS;
+	height: $MobileS;
+	border-radius: ($MobileS / 2);
 	box-shadow: 0 0 10pt 5pt #333333;
 	background-color: black;
+	margin: 20vh auto 0 auto;
+	position: relative;
 	div {
 		position: relative;
+		width: ($MobileS / 2) - 2pt;
+		height: ($MobileS / 2) - 2pt;
 	}
 	#color1 {
-		background-color: red;
+		background-color: #f44336;
 		display: inline-block;
 		position: relative;
+		border-radius: 50vw 0 0 0;
 		z-index: 1;
+	}
+	#color1:active {
+		background-color: #c62828;
 	}
 	#color2 {
-		background-color: blue;
+		background-color: #2196F3;
 		display: inline-block;
 		position: relative;
+		border-radius: 0 50vw 0 0;
 		z-index: 1;
+	}
+	#color2:active {
+		background-color: #1565C0;
 	}
 	#color3 {
-		background-color: yellow;
+		background-color: #FFEB3B;
 		display: inline-block;
 		position: relative;
+		border-radius: 0 0 50vw 0;
+		margin-top: -($MobileS / 4);
 		z-index: 1;
 	}
+	#color3:active {
+		background-color: #F9A825;
+	}
 	#color4 {
-		background-color: green;
+		background-color: #4CAF50;
 		display: inline-block;
 		position: relative;
+		border-radius: 0 0 0 50vw;
+		margin-top: -($MobileS / 4);
 		z-index: 1;
+	}
+	#color4:active {
+		background-color: #2E7D32;
 	}
 }
 #centerDisk {
@@ -45,10 +80,15 @@ body, html {
 	background-color: black;
 	position: absolute;
 	display: block;
-	box-shadow: 0 0 5pt 3pt;
+	text-align: center;
+	color: red;
+	border-radius: 50vw;
+	box-shadow: 0 0 5pt 3pt black;
 }
 #footer {
 	text-align: center;
+	font-size: 20pt;
+	vertical-align: center;
 	width: 100vw;
 	height: 10vh;
 	position: fixed;
@@ -56,250 +96,239 @@ body, html {
 	background-color: grey;
 }
 
-@media only screen and (min-width: $MobileS) {
+@media only screen and (max-width: $MobileS) {
 	#game {
-		margin-top: 25vh;
-		width: 100vw;
-		height: 100vw;
-		border-radius: 100vh;
+		margin: 10vh auto 0 auto;
+		width: $MobileS;
+		height: $MobileS;
+		border-radius: 100vw;
 		div {
-			width: 49vw;
-			height: 49vw;
+			width: ($MobileS / 2) - 2pt;
+			height: ($MobileS / 2) -2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 2pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 2pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -11vh;
+			margin-top: -($MobileS / 4);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -11vh;
+			margin-top: -($MobileS / 4);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: $MobileS / 2;
+		height: $MobileS / 2;
+		font-size: 50pt;
+		padding-top: ($MobileS / 8);
 		border-radius: 50vw;
-		margin: -11vh auto 0 auto;
+		margin: -($MobileS / 4) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $MobileM) {
 	#game {
-		margin-top: 20vh;
-		width: 100vw;
-		height: 100vw;
+		margin-top: 15vh;
+		width: $MobileS;
+		height: $MobileS;
 		border-radius: 100vh;
 		div {
-			width: 49vw;
-			height: 49vw;
+			width: ($MobileS / 2) - 2pt;
+			height: ($MobileS / 2) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 2pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 2pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -13vh;
+			margin-top: -($MobileS / 4);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -13vh;
+			margin-top: -($MobileS / 4);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: $MobileS / 2;
+		height: $MobileS / 2;
+		font-size: 50pt;
+		padding-top: ($MobileS / 8);
 		border-radius: 50vw;
-		margin: -13vh auto 0 auto;
+		margin: -($MobileS / 4) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $MobileL) {
 	#game {
-		//margin-top: 20vh;
-		width: 90vw;
-		height: 90vw;
+		margin-top: 5vh;
+		width: $Tablet / 2;
+		height: $Tablet / 2;
 		border-radius: 100vh;
-		margin: 20vh auto 0 auto;
 		div {
-			width: 44vw;
-			height: 44vw;
+			width: ($Tablet / 4) - 2pt;
+			height: ($Tablet / 4) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 2pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 2pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -14vh;
+			margin-top: -($Tablet / 8);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -14vh;
+			margin-top: -($Tablet / 8);
 		}
 	}
 	#centerDisk {
-		width: 40vw;
-		height: 40vw;
+		width: ($Tablet / 4);
+		height: ($Tablet / 4);
+		font-size: 60pt;
+		padding-top: ($Tablet / 16);
 		border-radius: 50vw;
-		margin: -13vh auto 0 auto;
+		margin: -($Tablet / 8) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $Tablet) {
 	#game {
 		margin-top: 10vh;
-		width: 60vw;
-		height: 60vw;
+		width: $Tablet / 2;
+		height: $Tablet / 2;
 		border-radius: 100vh;
 		div {
-			width: 29vw;
-			height: 29vw;
+			width: ($Tablet / 4) - 2pt;
+			height: ($Tablet / 4) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 4pt;
-			margin-left: 2pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 4pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -15vh;
+			margin-top: -($Tablet / 8);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -15vh;
-			margin-left: 2pt;
+			margin-top: -($Tablet / 8);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: ($Tablet / 4);
+		height: ($Tablet / 4);
+		font-size: 60pt;
+		padding-top: ($Tablet / 16);
 		border-radius: 50vw;
-		margin: -16vh auto 0 auto;
+		margin: -($Tablet / 8) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $Laptop) {
 	#game {
 		margin-top: 10vh;
-		width: 60vw;
-		height: 60vw;
+		width: ($Tablet / 2);
+		height: ($Tablet / 2);
 		border-radius: 100vh;
 		div {
-			width: 29vw;
-			height: 29vw;
+			width: ($Tablet / 4) - 2pt;
+			height: ($Tablet / 4) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 4pt;
-			margin-left: 4pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 4pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -15vh;
+			margin-top: -($Tablet / 8);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -15vh;
-			margin-left: 4pt;
+			margin-top: -($Tablet / 8);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: ($Tablet / 4);
+		height: ($Tablet / 4);
 		border-radius: 50vw;
-		margin: -16vh auto 0 auto;
+		font-size: 60pt;
+		padding-top: ($Tablet / 16);
+		margin: -($Tablet / 8) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $LaptopL) {
 	#game {
 		margin-top: 10vh;
-		width: 50vw;
-		height: 50vw;
+		width: ($LaptopL / 2);
+		height: ($LaptopL / 2);
 		border-radius: 100vh;
 		div {
-			width: 24vw;
-			height: 24vw;
+			width: ($LaptopL / 4) - 2pt;
+			height: ($LaptopL / 4) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 6pt;
-			margin-left: 6pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 6pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -16vh;
+			margin-top: -($LaptopL / 8);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -16vh;
-			margin-left: 6pt;
+			margin-top: -($LaptopL / 8);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: ($LaptopL / 4);
+		height: ($LaptopL / 4);
 		border-radius: 50vw;
-		margin: -17vh auto 0 auto;
+		font-size: 100pt;
+		padding-top: ($LaptopL / 16);
+		margin: -($LaptopL / 8) auto 0 auto;
 	}
 }
 @media only screen and (min-width: $FourK) {
 	#game {
 		margin-top: 10vh;
-		width: 50vw;
-		height: 50vw;
+		width: ($FourK / 4);
+		height: ($FourK / 4);
 		border-radius: 100vh;
 		div {
-			width: 24vw;
-			height: 24vw;
+			width: ($FourK / 8) - 2pt;
+			height: ($FourK / 8) - 2pt;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
-			margin-top: 20pt;
-			margin-left: 15pt;
 		}
 		#color2 {
 			border-radius: 0 50vw 0 0;
-			margin-top: 20pt;
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -16vh;
+			margin-top: -($FourK / 16);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -16vh;
-			margin-left: 15pt;
+			margin-top: -($FourK / 16);
 		}
 	}
 	#centerDisk {
-		width: 50vw;
-		height: 50vw;
+		width: ($FourK / 8);
+		height: ($FourK / 8);
 		border-radius: 50vw;
-		margin: -15vh auto 0 auto;
+		margin: -($FourK / 16) auto 0 auto;
 	}
 }
