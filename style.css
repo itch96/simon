@@ -1,13 +1,23 @@
 body, html {
   background-color: lightgrey; }
 
+#button {
+  background-color: #16a085;
+  width: 100pt;
+  height: 40pt;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding-top: 10pt; }
+
 #game {
   width: 320pt;
   height: 320pt;
   border-radius: 160pt;
   box-shadow: 0 0 10pt 5pt #333333;
   background-color: black;
-  margin: 25vh auto 0 auto;
+  margin: 20vh auto 0 auto;
   position: relative; }
   #game div {
     position: relative;
@@ -53,8 +63,10 @@ body, html {
   background-color: black;
   position: absolute;
   display: block;
+  text-align: center;
+  color: red;
   border-radius: 50vw;
-  box-shadow: 0 0 5pt 3pt; }
+  box-shadow: 0 0 5pt 3pt black; }
 
 #footer {
   text-align: center;
@@ -68,30 +80,32 @@ body, html {
 
 @media only screen and (max-width: 320pt) {
   #game {
-    margin: 20vh auto 0 auto;
-    width: 160pt;
-    height: 160pt;
-    border-radius: 80pt; }
+    margin: 10vh auto 0 auto;
+    width: 320pt;
+    height: 320pt;
+    border-radius: 100vw; }
     #game div {
-      width: 78pt;
-      height: 80pt -2pt; }
+      width: 158pt;
+      height: 160pt -2pt; }
     #game #color1 {
       border-radius: 50vw 0 0 0; }
     #game #color2 {
       border-radius: 0 50vw 0 0; }
     #game #color3 {
       border-radius: 0 0 50vw 0;
-      margin-top: -40pt; }
+      margin-top: -80pt; }
     #game #color4 {
       border-radius: 0 0 0 50vw;
-      margin-top: -40pt; }
+      margin-top: -80pt; }
 
   #centerDisk {
-    width: 80pt;
-    height: 80pt;
+    width: 160pt;
+    height: 160pt;
+    font-size: 50pt;
+    padding-top: 40pt;
     border-radius: 50vw;
-    margin: -40pt auto 0 auto; } }
-@media only screen and (max-width: 375pt) {
+    margin: -80pt auto 0 auto; } }
+@media only screen and (min-width: 375pt) {
   #game {
     margin-top: 15vh;
     width: 320pt;
@@ -114,9 +128,65 @@ body, html {
   #centerDisk {
     width: 160pt;
     height: 160pt;
+    font-size: 50pt;
+    padding-top: 40pt;
     border-radius: 50vw;
     margin: -80pt auto 0 auto; } }
 @media only screen and (min-width: 425pt) {
+  #game {
+    margin-top: 5vh;
+    width: 384pt;
+    height: 384pt;
+    border-radius: 100vh; }
+    #game div {
+      width: 190pt;
+      height: 190pt; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -96pt; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -96pt; }
+
+  #centerDisk {
+    width: 192pt;
+    height: 192pt;
+    font-size: 60pt;
+    padding-top: 48pt;
+    border-radius: 50vw;
+    margin: -96pt auto 0 auto; } }
+@media only screen and (min-width: 768pt) {
+  #game {
+    margin-top: 10vh;
+    width: 384pt;
+    height: 384pt;
+    border-radius: 100vh; }
+    #game div {
+      width: 190pt;
+      height: 190pt; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -96pt; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -96pt; }
+
+  #centerDisk {
+    width: 192pt;
+    height: 192pt;
+    font-size: 60pt;
+    padding-top: 48pt;
+    border-radius: 50vw;
+    margin: -96pt auto 0 auto; } }
+@media only screen and (min-width: 1024pt) {
   #game {
     margin-top: 10vh;
     width: 384pt;
@@ -140,57 +210,9 @@ body, html {
     width: 192pt;
     height: 192pt;
     border-radius: 50vw;
+    font-size: 60pt;
+    padding-top: 48pt;
     margin: -96pt auto 0 auto; } }
-@media only screen and (min-width: 768pt) {
-  #game {
-    margin-top: 15vh;
-    width: 384pt;
-    height: 384pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 190pt;
-      height: 190pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -96pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -96pt; }
-
-  #centerDisk {
-    width: 192pt;
-    height: 192pt;
-    border-radius: 50vw;
-    margin: -96pt auto 0 auto; } }
-@media only screen and (min-width: 1024pt) {
-  #game {
-    margin-top: 15vh;
-    width: 512pt;
-    height: 512pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 254pt;
-      height: 254pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -128pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -128pt; }
-
-  #centerDisk {
-    width: 256pt;
-    height: 256pt;
-    border-radius: 50vw;
-    margin: -128pt auto 0 auto; } }
 @media only screen and (min-width: 1420pt) {
   #game {
     margin-top: 10vh;
@@ -215,6 +237,8 @@ body, html {
     width: 355pt;
     height: 355pt;
     border-radius: 50vw;
+    font-size: 100pt;
+    padding-top: 88.75pt;
     margin: -177.5pt auto 0 auto; } }
 @media only screen and (min-width: 2560pt) {
   #game {
