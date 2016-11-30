@@ -44,6 +44,7 @@ var main = function() {
 			$('#button').css({'backgroundColor': '#16a085'});
 			$(this).html("Start");
 			gameStatus = 0;
+			$('#centerDisk').html(0);
 			generatedPattern = [];
 		}
 	});
@@ -51,6 +52,7 @@ var main = function() {
 	var playGame = function(level) {
 		console.log("New game of " + level + " level has started.");
 		var currentLevel = level;
+		$('#centerDisk').html(currentLevel);
 		// empty the userPattern array
 		userPattern.splice(0, userPattern.length);
 		console.log("The current user pattern is: " + userPattern);
