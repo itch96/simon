@@ -162,23 +162,19 @@ var main = function() {
 
 	function play1(time) {
 		$('#color1').css({'backgroundColor' : '#c62828'});
-		playSound1();
-		setTimeout( function() {$('#color1').css({'backgroundColor' : '#f44336'});}, time);
+		setTimeout( function() {$('#color1').css({'backgroundColor' : '#f44336'});playSound1();}, time);
 	};
 	function play2(time) {
 		$('#color2').css({'backgroundColor' : '#1565C0'});
-		playSound2();
-		setTimeout( function() {$('#color2').css({'backgroundColor' : '#2196F3'});}, time);
+		setTimeout( function() {$('#color2').css({'backgroundColor' : '#2196F3'});playSound2();}, time);
 	};
 	function play3(time) {
 		$('#color3').css({'backgroundColor' : '#F9A825'});
-		playSound3();
-		setTimeout( function() {$('#color3').css({'backgroundColor' : '#FFEB3B'});}, time);
+		setTimeout( function() {$('#color3').css({'backgroundColor' : '#FFEB3B'});playSound3();}, time);
 	};
 	function play4(time) {
 		$('#color4').css({'backgroundColor' : '#2E7D32'});
-		playSound4();
-		setTimeout( function() {$('#color4').css({'backgroundColor' : '#4CAF50'});}, time);
+		setTimeout( function() {$('#color4').css({'backgroundColor' : '#4CAF50'});playSound4();}, time);
 	};
 
 	function userMadeAMistake() {
