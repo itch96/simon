@@ -179,7 +179,7 @@ span {
 }
 @media only screen and (min-width: $MobileL) {
 	#button {
-		font-size: 10pt;
+		font-size: 15pt;
 	}
 	#game {
 		margin-top: 5vh;
@@ -216,10 +216,10 @@ span {
 }
 @media only screen and (min-width: $Tablet) {
 	#button {
-		font-size: 10pt;
+		font-size: 15pt;
 	}
 	#game {
-		margin-top: 10vh;
+		margin-top: 3vh;
 		width: $Tablet / 2;
 		height: $Tablet / 2;
 		border-radius: 100vh;
@@ -253,10 +253,10 @@ span {
 }
 @media only screen and (min-width: $Laptop) {
 	#button {
-		font-size: 10pt;
+		font-size: 20pt;
 	}
 	#game {
-		margin-top: 10vh;
+		margin-top: 5vh;
 		width: ($Tablet / 2);
 		height: ($Tablet / 2);
 		border-radius: 100vh;
@@ -287,13 +287,16 @@ span {
 		padding-top: ($Tablet / 16);
 		margin: -($Tablet / 8) auto 0 auto;
 	}
+	#footer {
+		padding-top: 10pt;
+	}
 }
 @media only screen and (min-width: $LaptopL) {
 	#button {
-		font-size: 10pt;
+		font-size: 20pt;
 	}
 	#game {
-		margin-top: 10vh;
+		margin-top: 0vh;
 		width: ($LaptopL / 2);
 		height: ($LaptopL / 2);
 		border-radius: 100vh;

@@ -150,7 +150,7 @@ span {
     margin: -80pt auto 0 auto; } }
 @media only screen and (min-width: 425pt) {
   #button {
-    font-size: 10pt; }
+    font-size: 15pt; }
 
   #game {
     margin-top: 5vh;
@@ -180,10 +180,10 @@ span {
     margin: -96pt auto 0 auto; } }
 @media only screen and (min-width: 768pt) {
   #button {
-    font-size: 10pt; }
+    font-size: 15pt; }
 
   #game {
-    margin-top: 10vh;
+    margin-top: 3vh;
     width: 384pt;
     height: 384pt;
     border-radius: 100vh; }
@@ -210,10 +210,10 @@ span {
     margin: -96pt auto 0 auto; } }
 @media only screen and (min-width: 1024pt) {
   #button {
-    font-size: 10pt; }
+    font-size: 20pt; }
 
   #game {
-    margin-top: 10vh;
+    margin-top: 5vh;
     width: 384pt;
     height: 384pt;
     border-radius: 100vh; }
@@ -237,13 +237,16 @@ span {
     border-radius: 50vw;
     font-size: 60pt;
     padding-top: 48pt;
-    margin: -96pt auto 0 auto; } }
+    margin: -96pt auto 0 auto; }
+
+  #footer {
+    padding-top: 10pt; } }
 @media only screen and (min-width: 1420pt) {
   #button {
-    font-size: 10pt; }
+    font-size: 20pt; }
 
   #game {
-    margin-top: 10vh;
+    margin-top: 0vh;
     width: 710pt;
     height: 710pt;
     border-radius: 100vh; }
