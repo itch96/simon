@@ -20,6 +20,8 @@ var main = function() {
 	var gameStatus = 0;
 	var generatedPattern = [];
 	var userPattern = [];
+	var currentLevel = 0;
+	var userPressed = 5;
 
 	$('#button').hover(
 	                   function() {
@@ -45,100 +47,30 @@ var main = function() {
 			$(this).html("Start");
 			gameStatus = 0;
 			$('#centerDisk').html(0);
+			currentLevel = 0;
 			generatedPattern = [];
 		}
 	});
 
-	var playGame = function(level) {
-		console.log("New game of " + level + " level has started.");
-		var currentLevel = level;
+	function playGame(level) {
+		console.log("New game of level " + level +"has started.");
+		currentLevel = level;
 		$('#centerDisk').html(currentLevel);
-		// empty the userPattern array
-		userPattern.splice(0, userPattern.length);
-		console.log("The current user pattern is: " + userPattern);
-		var result = undefined;
 
+		// generate a pattern for the computer to play.
 		generatedPattern.push(Math.ceil(Math.random() * 4));
-		console.log("Generated Pattern: " + generatedPattern);
 
 		console.log("Computer will now play the game.");
-		var time = setTimeout(compPlayGame(generatedPattern), 1000);
-		console.log("Computer has finished playing");
+		// start next level after 1s break
+		setTimeout(compPlayGame(), 1000);
+	}
 
-		// the user will play the game
-		var i = 0;
-		console.log(i);
-		console.log("The computer pattern is: " + generatedPattern);
-		$('#color1').on('click', function() {
-			playSound1();
-			userPattern[i] = 1;
-			console.log("The user pattern is: " + userPattern);
-			if(userPattern[i] == generatedPattern[i]) {result = true;}
-			else {result = false; userMadeAMistake();}
-			i ++;
-			if(i == generatedPattern.length || result == false) {
-				// the enterd pattern matches the generated pattern. Level up.
-				console.log("The current level is: " + currentLevel);
-				if(result == true) {currentLevel ++; playGame(currentLevel);}
-				else if(result == false) {console.log("User has lost.");}
-				else { console.log("result is: " + result); }
-			}
-		});
-		$('#color2').on('click', function() {
-			playSound2();
-			userPattern[i] = 2;
-			console.log("The user pattern is: " + userPattern);
-			if(userPattern[i] == generatedPattern[i]) {result = true;}
-			else {result = false; userMadeAMistake();}
-			i ++;
-			if(i == generatedPattern.length || result == false) {
-				// the enterd pattern matches the generated pattern. Level up.
-				console.log("The current level is: " + currentLevel);
-				if(result == true) {currentLevel ++; playGame(currentLevel);}
-				else if(result == false) {console.log("User has lost.");}
-				else { console.log("result is: " + result); }
-			}
-		});
-		$('#color3').on('click', function() {
-			playSound3();
-			userPattern[i] = 3;
-			console.log("The user pattern is: " + userPattern);
-			if(userPattern[i] == generatedPattern[i]) {result = true;}
-			else {result = false; userMadeAMistake();}
-			i ++;
-			if(i == generatedPattern.length || result == false) {
-				// the enterd pattern matches the generated pattern. Level up.
-				console.log("The current level is: " + currentLevel);
-				if(result == true) {currentLevel ++; playGame(currentLevel);}
-				else if(result == false) {console.log("User has lost.");}
-				else { console.log("result is: " + result); }
-			}
-		});
-		$('#color4').on('click', function() {
-			playSound4();
-			userPattern[i] = 4;
-			console.log("The user pattern is: " + userPattern);
-			if(userPattern[i] == generatedPattern[i]) {result = true;}
-			else {result = false; userMadeAMistake();}
-			i ++;
-			if(i == generatedPattern.length || result == false) {
-				// the enterd pattern matches the generated pattern. Level up.
-				console.log("The current level is: " + currentLevel);
-				if(result == true) {currentLevel ++; playGame(currentLevel);}
-				else if(result == false) {console.log("User has lost.");}
-				else { console.log("result is: " + result); }
-			}
-		});
-	};
-
-	function compPlayGame(pattern) {
+	function compPlayGame() {
 		var k = 0;
 		var interval = 1000;
-		var level = pattern.length;
+		var level = generatedPattern.length;
 
-		console.log("Computer is playing the game according to the following pattern.");
-		console.log(pattern);
-		console.log("You are at level: " + level);
+		console.log("Computer is playing the game according to the generatedPattern: " + generatedPattern);
 
 		// set interval as per the level
 		if(level < 5) {interval = 1000;}
@@ -146,39 +78,142 @@ var main = function() {
 		else if(level < 15) {interval = 600;}
 		else if(level < 20) {interval = 400;}
 		else if(level < 25) {interval = 200;}
-		else {interval = 100;}
-		console.log("The time interval is: " + interval);
+		else {interval = 150;}
+		console.log("The level " + level + " will run at " + interval + " speed.");
 
 		//play the sounds with effects
-			var temp = setInterval(function() {
-				if(pattern[k] == 1) {play1(interval);}
-				else if(pattern[k] == 2) {play2(interval);}
-				else if(pattern[k] == 3) {play3(interval);}
-				else if(pattern[k] == 4){play4(interval);}
-				else {/*Do nothing*/}
-				k ++;
-			}, interval);
-	};
+		var temp = setInterval(function() {
+			if(generatedPattern[k] == 1) {play1();}
+			else if(generatedPattern[k] == 2) {play2();}
+			else if(generatedPattern[k] == 3) {play3();}
+			else if(generatedPattern[k] == 4){play4();}
+			else {/*Do nothing*/console.log("generatedPattern[k] " + generatedPattern[k]);}
+			k ++;
+			if(k == generatedPattern.length) {
+				console.log("Computer has finished playing the game.");
+				clearInterval(temp);
+				temp = 0; // just in case
+				// now give user a chance to play the game.
+				userPlayGame();
+			}
+		}, interval);
+	}
 
-	function play1(time) {
+	function play1() {
 		$('#color1').css({'backgroundColor' : '#c62828'});
-		setTimeout( function() {$('#color1').css({'backgroundColor' : '#f44336'});playSound1();}, time);
-	};
-	function play2(time) {
+		setTimeout( function() {$('#color1').css({'backgroundColor' : '#f44336'});playSound1();}, 100);
+	}
+	function play2() {
 		$('#color2').css({'backgroundColor' : '#1565C0'});
-		setTimeout( function() {$('#color2').css({'backgroundColor' : '#2196F3'});playSound2();}, time);
-	};
-	function play3(time) {
+		setTimeout( function() {$('#color2').css({'backgroundColor' : '#2196F3'});playSound2();}, 100);
+	}
+	function play3() {
 		$('#color3').css({'backgroundColor' : '#F9A825'});
-		setTimeout( function() {$('#color3').css({'backgroundColor' : '#FFEB3B'});playSound3();}, time);
-	};
-	function play4(time) {
+		setTimeout( function() {$('#color3').css({'backgroundColor' : '#FFEB3B'});playSound3();}, 100);
+	}
+	function play4() {
 		$('#color4').css({'backgroundColor' : '#2E7D32'});
-		setTimeout( function() {$('#color4').css({'backgroundColor' : '#4CAF50'});playSound4();}, time);
-	};
+		setTimeout( function() {$('#color4').css({'backgroundColor' : '#4CAF50'});playSound4();}, 100);
+	}
+
+	function userPlayGame() {
+		// the user will now play the game
+		var i = 0;
+		var result = undefined;
+		var count = 0;
+		console.log(i);
+		console.log("The generated pattern is: " + generatedPattern);
+
+		$('#color1').on('click', function() {
+			play1();
+			userPressed = 1;
+			console.log(userPressed + " " + generatedPattern[i] + " " + i);
+			if(userPressed == generatedPattern[i]) {result = true;}
+			else {result = false; count ++; userMadeAMistake();}
+			i ++;
+			if(i == generatedPattern.length) {
+				// the enterd pattern matches the generated pattern. Level up.
+				userPattern.push(userPressed);
+				console.log("The userPattern is: " + userPattern);
+				if(result == true && match(userPattern, generatedPattern)) { playGame(++ currentLevel);}
+				else if(result == false) {console.log("User has lost.");}
+				else { console.log("result is: " + result);}
+			}
+		});
+		$('#color2').on('click', function() {
+			play2();
+			userPressed = 2;
+			console.log(userPressed + " " + generatedPattern[i] + " " + i);
+
+			if(userPressed == generatedPattern[i]) {result = true;}
+			else {result = false; userMadeAMistake();}
+			i ++;
+			if(i == generatedPattern.length) {
+				// the enterd pattern matches the generated pattern. Level up.
+				userPattern.push(userPressed);
+				console.log("The userPattern is: " + userPattern);
+				if(result == true && match(userPattern, generatedPattern)) { playGame(++ currentLevel);}
+				else if(result == false) {console.log("User has lost.");}
+				else { console.log("result is: " + result);}
+			}
+		});
+		$('#color3').on('click', function() {
+			play3();
+			userPressed = 3;
+			console.log(userPressed + " " + generatedPattern[i] + " " + i);
+			if(userPressed == generatedPattern[i]) {
+				result = true;
+
+				//console.log("The user Pattern is : " + userPattern);
+			}
+			else {result = false; userMadeAMistake();}
+			i ++;
+			if(i == generatedPattern.length) {
+				// the enterd pattern matches the generated pattern. Level up.
+				userPattern.push(userPressed);
+				console.log("The userPattern is: " + userPattern);
+				if(result == true && match(userPattern, generatedPattern)) { playGame(++ currentLevel);}
+				else if(result == false) {console.log("User has lost.");}
+				else { console.log("result is: " + result);}
+			}
+		});
+		$('#color4').on('click', function() {
+			play4();
+			userPressed = 4;
+			console.log(userPressed + " " + generatedPattern[i] + " " + i);
+			if(userPressed == generatedPattern[i]) {
+				result = true;
+
+				//console.log("The user Pattern is : " + userPattern);
+			}
+			else {result = false; userMadeAMistake();}
+			i ++;
+			if(i == generatedPattern.length) {
+				// the enterd pattern matches the generated pattern. Level up.
+				userPattern.push(userPressed);
+				console.log("The userPattern is: " + userPattern);
+				if(result == true && match(userPattern, generatedPattern)) { playGame(++ currentLevel);}
+				else if(result == false) {console.log("User has lost.");}
+				else { console.log("result is: " + result);}
+			}
+		});
+	}
+
+	function match(array1, array2) {
+		if(array2.length != array1.length) {return false;}
+		else {
+			var x = 0;
+			for(x = 0; x < array1.length; x ++) {
+				if(array1[x] != array2[x]) {return false;}
+			}
+			if(x == array1.length) {return true;}
+		}
+	}
 
 	function userMadeAMistake() {
 		console.log("User Made a mistake.");
-	};
+		$('#centerDisk').html("X");
+	}
 };
+
 $(document).ready(main);
