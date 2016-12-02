@@ -76,9 +76,22 @@ body, html {
   height: 10vh;
   position: fixed;
   bottom: 0;
-  background-color: grey; }
+  background-color: grey;
+  color: white; }
+  #footer a {
+    color: white; }
+  #footer a:hover {
+    text-decoration: none; }
+  #footer a:visited {
+    text-decoration: none; }
+
+span {
+  color: #e74c3c; }
 
 @media only screen and (max-width: 320pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin: 10vh auto 0 auto;
     width: 320pt;
@@ -106,6 +119,9 @@ body, html {
     border-radius: 50vw;
     margin: -80pt auto 0 auto; } }
 @media only screen and (min-width: 375pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 15vh;
     width: 320pt;
@@ -133,6 +149,9 @@ body, html {
     border-radius: 50vw;
     margin: -80pt auto 0 auto; } }
 @media only screen and (min-width: 425pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 5vh;
     width: 384pt;
@@ -160,6 +179,9 @@ body, html {
     border-radius: 50vw;
     margin: -96pt auto 0 auto; } }
 @media only screen and (min-width: 768pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 10vh;
     width: 384pt;
@@ -187,6 +209,9 @@ body, html {
     border-radius: 50vw;
     margin: -96pt auto 0 auto; } }
 @media only screen and (min-width: 1024pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 10vh;
     width: 384pt;
@@ -214,6 +239,9 @@ body, html {
     padding-top: 48pt;
     margin: -96pt auto 0 auto; } }
 @media only screen and (min-width: 1420pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 10vh;
     width: 710pt;
@@ -241,6 +269,9 @@ body, html {
     padding-top: 88.75pt;
     margin: -177.5pt auto 0 auto; } }
 @media only screen and (min-width: 2560pt) {
+  #button {
+    font-size: 10pt; }
+
   #game {
     margin-top: 10vh;
     width: 640pt;
