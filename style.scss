@@ -94,9 +94,19 @@ body, html {
 	position: fixed;
 	bottom: 0;
 	background-color: grey;
+	color: white;
+	a {color: white;}
+	a:hover {text-decoration: none;}
+	a:visited {text-decoration: none;}
+}
+span {
+	color: #e74c3c;
 }
 
 @media only screen and (max-width: $MobileS) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin: 10vh auto 0 auto;
 		width: $MobileS;
@@ -131,6 +141,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $MobileM) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 15vh;
 		width: $MobileS;
@@ -165,6 +178,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $MobileL) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 5vh;
 		width: $Tablet / 2;
@@ -199,6 +215,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $Tablet) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 10vh;
 		width: $Tablet / 2;
@@ -233,6 +252,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $Laptop) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 10vh;
 		width: ($Tablet / 2);
@@ -267,6 +289,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $LaptopL) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 10vh;
 		width: ($LaptopL / 2);
@@ -301,6 +326,9 @@ body, html {
 	}
 }
 @media only screen and (min-width: $FourK) {
+	#button {
+		font-size: 10pt;
+	}
 	#game {
 		margin-top: 10vh;
 		width: ($FourK / 4);
