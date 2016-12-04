@@ -1,5 +1,11 @@
 var main = function() {
 
+	alert("Hello!" +
+	        "\nHow to play: " +
+	        "\n1. Press the \'Start\' button at the top. The computer will play a pattern." +
+	        "\n2. Repeat the pattern to advance to the next level." +
+	        "\nEnjoy!");
+
 	function playSound1() {
 		var sound1 = new Audio("./Sounds/simonSound1.mp3");
 		sound1.play();
