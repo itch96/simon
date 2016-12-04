@@ -9,7 +9,8 @@ body, html {
   margin: 0 auto;
   text-align: center;
   color: white;
-  padding-top: 10pt; }
+  padding-top: 10pt;
+  box-shadow: 0px 2px 10px #424242; }
 
 #game {
   width: 320pt;
@@ -66,7 +67,9 @@ body, html {
   text-align: center;
   color: red;
   border-radius: 50vw;
-  box-shadow: 0 0 5pt 3pt black; }
+  box-shadow: 0 0 5pt 3pt black;
+  text-shadow: 0px 0px 5px red;
+  font-family: 'Play'; }
 
 #footer {
   text-align: center;
@@ -77,7 +80,8 @@ body, html {
   position: fixed;
   bottom: 0;
   background-color: grey;
-  color: white; }
+  color: white;
+  box-shadow: 0px -3px 10px #424242; }
   #footer a {
     color: white; }
   #footer a:hover {
