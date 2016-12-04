@@ -1,37 +1,37 @@
-$MobileS: 320pt;
-$MobileM: 375pt;
-$MobileL: 425pt;
-$Tablet: 768pt;
-$Laptop: 1024pt;
-$LaptopL: 1420pt;
-$FourK: 2560pt;
+$MobileS: 320px;
+$MobileM: 375px;
+$MobileL: 425px;
+$Tablet: 768px;
+$Laptop: 1024px;
+$LaptopL: 1420px;
+$FourK: 2560px;
 
 body, html {
 	background-color: lightgrey;
 }
 #button {
 	background-color: #16a085;
-	width: 100pt;
-	height: 40pt;
+	width: 100px;
+	height: 40px;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
 	color: white;
-	padding-top: 10pt;
+	padding-top: 10px;
 	box-shadow: 0px 2px 10px #424242;
 }
 #game {
 	width: $MobileS;
 	height: $MobileS;
 	border-radius: ($MobileS / 2);
-	box-shadow: 0 0 10pt 5pt #333333;
+	box-shadow: 0 0 10px 5px #333333;
 	background-color: black;
 	margin: 20vh auto 0 auto;
 	position: relative;
 	div {
 		position: relative;
-		width: ($MobileS / 2) - 2pt;
-		height: ($MobileS / 2) - 2pt;
+		width: ($MobileS / 2) - 2px;
+		height: ($MobileS / 2) - 2px;
 	}
 	#color1 {
 		background-color: #f44336;
@@ -84,14 +84,13 @@ body, html {
 	text-align: center;
 	color: red;
 	border-radius: 50vw;
-	box-shadow: 0 0 5pt 3pt black;
+	box-shadow: 0 0 5px 3px black;
 	text-shadow: 0px 0px 5px red;
 	font-family: 'Play';
 }
 #footer {
 	text-align: center;
-	font-size: 20pt;
-	vertical-align: center;
+	font-size: 20px;
 	width: 100vw;
 	height: 10vh;
 	position: fixed;
@@ -99,6 +98,7 @@ body, html {
 	background-color: grey;
 	color: white;
 	box-shadow: 0px -3px 10px #424242;
+
 	a {color: white;}
 	a:hover {text-decoration: none;}
 	a:visited {text-decoration: none;}
@@ -107,9 +107,10 @@ span {
 	color: #e74c3c;
 }
 
-@media only screen and (max-width: $MobileS) {
+
+@media only screen and (min-width: $MobileS) {
 	#button {
-		font-size: 10pt;
+		font-size: 20px;
 	}
 	#game {
 		margin: 10vh auto 0 auto;
@@ -117,8 +118,8 @@ span {
 		height: $MobileS;
 		border-radius: 100vw;
 		div {
-			width: ($MobileS / 2) - 2pt;
-			height: ($MobileS / 2) -2pt;
+			width: ($MobileS / 2) - 2px;
+			height: ($MobileS / 2) -2px;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
@@ -138,212 +139,28 @@ span {
 	#centerDisk {
 		width: $MobileS / 2;
 		height: $MobileS / 2;
-		font-size: 50pt;
+		font-size: 50px;
 		padding-top: ($MobileS / 8);
 		border-radius: 50vw;
 		margin: -($MobileS / 4) auto 0 auto;
-	}
-}
-@media only screen and (min-width: $MobileM) {
-	#button {
-		font-size: 10pt;
-	}
-	#game {
-		margin-top: 15vh;
-		width: $MobileS;
-		height: $MobileS;
-		border-radius: 100vh;
-		div {
-			width: ($MobileS / 2) - 2pt;
-			height: ($MobileS / 2) - 2pt;
-		}
-		#color1 {
-			border-radius: 50vw 0 0 0;
-		}
-		#color2 {
-			border-radius: 0 50vw 0 0;
-		}
-		#color3 {
-			border-radius: 0 0 50vw 0;
-			margin-top: -($MobileS / 4);
-		}
-		#color4 {
-			border-radius: 0 0 0 50vw;
-			margin-top: -($MobileS / 4);
-		}
-	}
-	#centerDisk {
-		width: $MobileS / 2;
-		height: $MobileS / 2;
-		font-size: 50pt;
-		padding-top: ($MobileS / 8);
-		border-radius: 50vw;
-		margin: -($MobileS / 4) auto 0 auto;
-	}
-}
-@media only screen and (min-width: $MobileL) {
-	#button {
-		font-size: 15pt;
-	}
-	#game {
-		margin-top: 5vh;
-		width: $Tablet / 2;
-		height: $Tablet / 2;
-		border-radius: 100vh;
-		div {
-			width: ($Tablet / 4) - 2pt;
-			height: ($Tablet / 4) - 2pt;
-		}
-		#color1 {
-			border-radius: 50vw 0 0 0;
-		}
-		#color2 {
-			border-radius: 0 50vw 0 0;
-		}
-		#color3 {
-			border-radius: 0 0 50vw 0;
-			margin-top: -($Tablet / 8);
-		}
-		#color4 {
-			border-radius: 0 0 0 50vw;
-			margin-top: -($Tablet / 8);
-		}
-	}
-	#centerDisk {
-		width: ($Tablet / 4);
-		height: ($Tablet / 4);
-		font-size: 60pt;
-		padding-top: ($Tablet / 16);
-		border-radius: 50vw;
-		margin: -($Tablet / 8) auto 0 auto;
-	}
-}
-@media only screen and (min-width: $Tablet) {
-	#button {
-		font-size: 15pt;
-	}
-	#game {
-		margin-top: 3vh;
-		width: $Tablet / 2;
-		height: $Tablet / 2;
-		border-radius: 100vh;
-		div {
-			width: ($Tablet / 4) - 2pt;
-			height: ($Tablet / 4) - 2pt;
-		}
-		#color1 {
-			border-radius: 50vw 0 0 0;
-		}
-		#color2 {
-			border-radius: 0 50vw 0 0;
-		}
-		#color3 {
-			border-radius: 0 0 50vw 0;
-			margin-top: -($Tablet / 8);
-		}
-		#color4 {
-			border-radius: 0 0 0 50vw;
-			margin-top: -($Tablet / 8);
-		}
-	}
-	#centerDisk {
-		width: ($Tablet / 4);
-		height: ($Tablet / 4);
-		font-size: 60pt;
-		padding-top: ($Tablet / 16);
-		border-radius: 50vw;
-		margin: -($Tablet / 8) auto 0 auto;
-	}
-}
-@media only screen and (min-width: $Laptop) {
-	#button {
-		font-size: 20pt;
-	}
-	#game {
-		margin-top: 5vh;
-		width: ($Tablet / 2);
-		height: ($Tablet / 2);
-		border-radius: 100vh;
-		div {
-			width: ($Tablet / 4) - 2pt;
-			height: ($Tablet / 4) - 2pt;
-		}
-		#color1 {
-			border-radius: 50vw 0 0 0;
-		}
-		#color2 {
-			border-radius: 0 50vw 0 0;
-		}
-		#color3 {
-			border-radius: 0 0 50vw 0;
-			margin-top: -($Tablet / 8);
-		}
-		#color4 {
-			border-radius: 0 0 0 50vw;
-			margin-top: -($Tablet / 8);
-		}
-	}
-	#centerDisk {
-		width: ($Tablet / 4);
-		height: ($Tablet / 4);
-		border-radius: 50vw;
-		font-size: 60pt;
-		padding-top: ($Tablet / 16);
-		margin: -($Tablet / 8) auto 0 auto;
 	}
 	#footer {
-		padding-top: 10pt;
+		padding-top: 10px;
 	}
 }
-@media only screen and (min-width: $LaptopL) {
+
+@media only screen and (min-width: $MobileM) {
 	#button {
-		font-size: 20pt;
-	}
-	#game {
-		margin-top: 0vh;
-		width: ($LaptopL / 2);
-		height: ($LaptopL / 2);
-		border-radius: 100vh;
-		div {
-			width: ($LaptopL / 4) - 2pt;
-			height: ($LaptopL / 4) - 2pt;
-		}
-		#color1 {
-			border-radius: 50vw 0 0 0;
-		}
-		#color2 {
-			border-radius: 0 50vw 0 0;
-		}
-		#color3 {
-			border-radius: 0 0 50vw 0;
-			margin-top: -($LaptopL / 8);
-		}
-		#color4 {
-			border-radius: 0 0 0 50vw;
-			margin-top: -($LaptopL / 8);
-		}
-	}
-	#centerDisk {
-		width: ($LaptopL / 4);
-		height: ($LaptopL / 4);
-		border-radius: 50vw;
-		font-size: 100pt;
-		padding-top: ($LaptopL / 16);
-		margin: -($LaptopL / 8) auto 0 auto;
-	}
-}
-@media only screen and (min-width: $FourK) {
-	#button {
-		font-size: 10pt;
+		font-size: 15px;
 	}
 	#game {
 		margin-top: 10vh;
-		width: ($FourK / 4);
-		height: ($FourK / 4);
+		width: $MobileM;
+		height: $MobileM;
 		border-radius: 100vh;
 		div {
-			width: ($FourK / 8) - 2pt;
-			height: ($FourK / 8) - 2pt;
+			width: ($MobileM / 2) - 2px;
+			height: ($MobileM / 2) - 2px;
 		}
 		#color1 {
 			border-radius: 50vw 0 0 0;
@@ -353,17 +170,180 @@ span {
 		}
 		#color3 {
 			border-radius: 0 0 50vw 0;
-			margin-top: -($FourK / 16);
+			margin-top: -($MobileM / 4);
 		}
 		#color4 {
 			border-radius: 0 0 0 50vw;
-			margin-top: -($FourK / 16);
+			margin-top: -($MobileM / 4);
 		}
 	}
 	#centerDisk {
-		width: ($FourK / 8);
-		height: ($FourK / 8);
+		width: $MobileM / 2;
+		height: $MobileM / 2;
+		font-size: 60px;
+		padding-top: ($MobileM / 8);
 		border-radius: 50vw;
-		margin: -($FourK / 16) auto 0 auto;
+		margin: -($MobileM / 4) auto 0 auto;
+	}
+	#footer {
+		padding-top: 20px;
+	}
+}
+
+@media only screen and (min-width: $MobileL) {
+	#button {
+		font-size: 20px;
+	}
+	#game {
+		margin-top: 10vh;
+		width: $MobileL;
+		height: $MobileL;
+		border-radius: 100vh;
+		div {
+			width: ($MobileL / 2) - 2px;
+			height: ($MobileL / 2) - 2px;
+		}
+		#color1 {
+			border-radius: 50vw 0 0 0;
+		}
+		#color2 {
+			border-radius: 0 50vw 0 0;
+		}
+		#color3 {
+			border-radius: 0 0 50vw 0;
+			margin-top: -($MobileL / 4);
+		}
+		#color4 {
+			border-radius: 0 0 0 50vw;
+			margin-top: -($MobileL / 4);
+		}
+	}
+	#centerDisk {
+		width: ($MobileL / 2);
+		height: ($MobileL / 2);
+		font-size: 70px;
+		padding-top: ($MobileL / 8);
+		border-radius: 50vw;
+		margin: -($MobileL / 4) auto 0 auto;
+	}
+}
+
+@media only screen and (min-width: $Tablet) {
+	#button {
+		font-size: 15px;
+	}
+	#game {
+		margin-top: 15vh;
+		width: $Tablet / 2;
+		height: $Tablet / 2;
+		border-radius: 100vh;
+		div {
+			width: ($Tablet / 4) - 2px;
+			height: ($Tablet / 4) - 2px;
+		}
+		#color1 {
+			border-radius: 50vw 0 0 0;
+		}
+		#color2 {
+			border-radius: 0 50vw 0 0;
+		}
+		#color3 {
+			border-radius: 0 0 50vw 0;
+			margin-top: -($Tablet / 8);
+		}
+		#color4 {
+			border-radius: 0 0 0 50vw;
+			margin-top: -($Tablet / 8);
+		}
+	}
+	#centerDisk {
+		width: ($Tablet / 4);
+		height: ($Tablet / 4);
+		font-size: 60px;
+		padding-top: ($Tablet / 16);
+		border-radius: 50vw;
+		margin: -($Tablet / 8) auto 0 auto;
+	}
+}
+
+@media only screen and (min-width: $Laptop) {
+	#button {
+		font-size: 20px;
+		width: 150px;
+		height: 50px;
+	}
+	#game {
+		margin-top: 5vh;
+		width: ($Laptop / 2);
+		height: ($Laptop / 2);
+		border-radius: 100vh;
+		div {
+			width: ($Laptop / 4) - 2px;
+			height: ($Laptop / 4) - 2px;
+		}
+		#color1 {
+			border-radius: 50vw 0 0 0;
+		}
+		#color2 {
+			border-radius: 0 50vw 0 0;
+		}
+		#color3 {
+			border-radius: 0 0 50vw 0;
+			margin-top: -($Laptop / 8);
+		}
+		#color4 {
+			border-radius: 0 0 0 50vw;
+			margin-top: -($Laptop / 8);
+		}
+	}
+	#centerDisk {
+		width: ($Laptop / 4);
+		height: ($Laptop / 4);
+		border-radius: 50vw;
+		font-size: 60pt;
+		padding-top: ($Laptop / 16);
+		margin: -($Laptop / 8) auto 0 auto;
+	}
+	#footer {
+		padding-top: 10pt;
+		font-size: 30px;
+	}
+}
+
+@media only screen and (min-width: $LaptopL) {
+	#button {
+		font-size: 20px;
+	}
+	#game {
+		margin-top: 5vh;
+		width: ($Laptop / 2);
+		height: ($Laptop / 2);
+		border-radius: 100vh;
+		div {
+			width: ($Laptop / 4) - 2px;
+			height: ($Laptop / 4) - 2px;
+		}
+		#color1 {
+			border-radius: 50vw 0 0 0;
+		}
+		#color2 {
+			border-radius: 0 50vw 0 0;
+		}
+		#color3 {
+			border-radius: 0 0 50vw 0;
+			margin-top: -($Laptop / 8);
+		}
+		#color4 {
+			border-radius: 0 0 0 50vw;
+			margin-top: -($Laptop / 8);
+		}
+	}
+	#centerDisk {
+		width: ($Laptop / 4);
+		height: ($Laptop / 4);
+		border-radius: 50vw;
+		font-size: 60pt;
+		padding-top: ($Laptop / 16);
+		margin: -($Laptop / 8) auto 0 auto;
 	}
 }

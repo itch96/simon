@@ -3,27 +3,27 @@ body, html {
 
 #button {
   background-color: #16a085;
-  width: 100pt;
-  height: 40pt;
+  width: 100px;
+  height: 40px;
   display: block;
   margin: 0 auto;
   text-align: center;
   color: white;
-  padding-top: 10pt;
+  padding-top: 10px;
   box-shadow: 0px 2px 10px #424242; }
 
 #game {
-  width: 320pt;
-  height: 320pt;
-  border-radius: 160pt;
-  box-shadow: 0 0 10pt 5pt #333333;
+  width: 320px;
+  height: 320px;
+  border-radius: 160px;
+  box-shadow: 0 0 10px 5px #333333;
   background-color: black;
   margin: 20vh auto 0 auto;
   position: relative; }
   #game div {
     position: relative;
-    width: 158pt;
-    height: 158pt; }
+    width: 158px;
+    height: 158px; }
   #game #color1 {
     background-color: #f44336;
     display: inline-block;
@@ -45,7 +45,7 @@ body, html {
     display: inline-block;
     position: relative;
     border-radius: 0 0 50vw 0;
-    margin-top: -80pt;
+    margin-top: -80px;
     z-index: 1; }
   #game #color3:active {
     background-color: #F9A825; }
@@ -54,7 +54,7 @@ body, html {
     display: inline-block;
     position: relative;
     border-radius: 0 0 0 50vw;
-    margin-top: -80pt;
+    margin-top: -80px;
     z-index: 1; }
   #game #color4:active {
     background-color: #2E7D32; }
@@ -67,14 +67,13 @@ body, html {
   text-align: center;
   color: red;
   border-radius: 50vw;
-  box-shadow: 0 0 5pt 3pt black;
+  box-shadow: 0 0 5px 3px black;
   text-shadow: 0px 0px 5px red;
   font-family: 'Play'; }
 
 #footer {
   text-align: center;
-  font-size: 20pt;
-  vertical-align: center;
+  font-size: 20px;
   width: 100vw;
   height: 10vh;
   position: fixed;
@@ -92,216 +91,197 @@ body, html {
 span {
   color: #e74c3c; }
 
-@media only screen and (max-width: 320pt) {
+@media only screen and (min-width: 320px) {
   #button {
-    font-size: 10pt; }
+    font-size: 20px; }
 
   #game {
     margin: 10vh auto 0 auto;
-    width: 320pt;
-    height: 320pt;
+    width: 320px;
+    height: 320px;
     border-radius: 100vw; }
     #game div {
-      width: 158pt;
-      height: 160pt -2pt; }
+      width: 158px;
+      height: 160px -2px; }
     #game #color1 {
       border-radius: 50vw 0 0 0; }
     #game #color2 {
       border-radius: 0 50vw 0 0; }
     #game #color3 {
       border-radius: 0 0 50vw 0;
-      margin-top: -80pt; }
+      margin-top: -80px; }
     #game #color4 {
       border-radius: 0 0 0 50vw;
-      margin-top: -80pt; }
+      margin-top: -80px; }
 
   #centerDisk {
-    width: 160pt;
-    height: 160pt;
-    font-size: 50pt;
-    padding-top: 40pt;
+    width: 160px;
+    height: 160px;
+    font-size: 50px;
+    padding-top: 40px;
     border-radius: 50vw;
-    margin: -80pt auto 0 auto; } }
-@media only screen and (min-width: 375pt) {
-  #button {
-    font-size: 10pt; }
-
-  #game {
-    margin-top: 15vh;
-    width: 320pt;
-    height: 320pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 158pt;
-      height: 158pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -80pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -80pt; }
-
-  #centerDisk {
-    width: 160pt;
-    height: 160pt;
-    font-size: 50pt;
-    padding-top: 40pt;
-    border-radius: 50vw;
-    margin: -80pt auto 0 auto; } }
-@media only screen and (min-width: 425pt) {
-  #button {
-    font-size: 15pt; }
-
-  #game {
-    margin-top: 5vh;
-    width: 384pt;
-    height: 384pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 190pt;
-      height: 190pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -96pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -96pt; }
-
-  #centerDisk {
-    width: 192pt;
-    height: 192pt;
-    font-size: 60pt;
-    padding-top: 48pt;
-    border-radius: 50vw;
-    margin: -96pt auto 0 auto; } }
-@media only screen and (min-width: 768pt) {
-  #button {
-    font-size: 15pt; }
-
-  #game {
-    margin-top: 3vh;
-    width: 384pt;
-    height: 384pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 190pt;
-      height: 190pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -96pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -96pt; }
-
-  #centerDisk {
-    width: 192pt;
-    height: 192pt;
-    font-size: 60pt;
-    padding-top: 48pt;
-    border-radius: 50vw;
-    margin: -96pt auto 0 auto; } }
-@media only screen and (min-width: 1024pt) {
-  #button {
-    font-size: 20pt; }
-
-  #game {
-    margin-top: 5vh;
-    width: 384pt;
-    height: 384pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 190pt;
-      height: 190pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -96pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -96pt; }
-
-  #centerDisk {
-    width: 192pt;
-    height: 192pt;
-    border-radius: 50vw;
-    font-size: 60pt;
-    padding-top: 48pt;
-    margin: -96pt auto 0 auto; }
+    margin: -80px auto 0 auto; }
 
   #footer {
-    padding-top: 10pt; } }
-@media only screen and (min-width: 1420pt) {
+    padding-top: 10px; } }
+@media only screen and (min-width: 375px) {
   #button {
-    font-size: 20pt; }
-
-  #game {
-    margin-top: 0vh;
-    width: 710pt;
-    height: 710pt;
-    border-radius: 100vh; }
-    #game div {
-      width: 353pt;
-      height: 353pt; }
-    #game #color1 {
-      border-radius: 50vw 0 0 0; }
-    #game #color2 {
-      border-radius: 0 50vw 0 0; }
-    #game #color3 {
-      border-radius: 0 0 50vw 0;
-      margin-top: -177.5pt; }
-    #game #color4 {
-      border-radius: 0 0 0 50vw;
-      margin-top: -177.5pt; }
-
-  #centerDisk {
-    width: 355pt;
-    height: 355pt;
-    border-radius: 50vw;
-    font-size: 100pt;
-    padding-top: 88.75pt;
-    margin: -177.5pt auto 0 auto; } }
-@media only screen and (min-width: 2560pt) {
-  #button {
-    font-size: 10pt; }
+    font-size: 15px; }
 
   #game {
     margin-top: 10vh;
-    width: 640pt;
-    height: 640pt;
+    width: 375px;
+    height: 375px;
     border-radius: 100vh; }
     #game div {
-      width: 318pt;
-      height: 318pt; }
+      width: 185.5px;
+      height: 185.5px; }
     #game #color1 {
       border-radius: 50vw 0 0 0; }
     #game #color2 {
       border-radius: 0 50vw 0 0; }
     #game #color3 {
       border-radius: 0 0 50vw 0;
-      margin-top: -160pt; }
+      margin-top: -93.75px; }
     #game #color4 {
       border-radius: 0 0 0 50vw;
-      margin-top: -160pt; }
+      margin-top: -93.75px; }
 
   #centerDisk {
-    width: 320pt;
-    height: 320pt;
+    width: 187.5px;
+    height: 187.5px;
+    font-size: 60px;
+    padding-top: 46.875px;
     border-radius: 50vw;
-    margin: -160pt auto 0 auto; } }
+    margin: -93.75px auto 0 auto; }
+
+  #footer {
+    padding-top: 20px; } }
+@media only screen and (min-width: 425px) {
+  #button {
+    font-size: 20px; }
+
+  #game {
+    margin-top: 10vh;
+    width: 425px;
+    height: 425px;
+    border-radius: 100vh; }
+    #game div {
+      width: 210.5px;
+      height: 210.5px; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -106.25px; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -106.25px; }
+
+  #centerDisk {
+    width: 212.5px;
+    height: 212.5px;
+    font-size: 70px;
+    padding-top: 53.125px;
+    border-radius: 50vw;
+    margin: -106.25px auto 0 auto; } }
+@media only screen and (min-width: 768px) {
+  #button {
+    font-size: 15px; }
+
+  #game {
+    margin-top: 15vh;
+    width: 384px;
+    height: 384px;
+    border-radius: 100vh; }
+    #game div {
+      width: 190px;
+      height: 190px; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -96px; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -96px; }
+
+  #centerDisk {
+    width: 192px;
+    height: 192px;
+    font-size: 60px;
+    padding-top: 48px;
+    border-radius: 50vw;
+    margin: -96px auto 0 auto; } }
+@media only screen and (min-width: 1024px) {
+  #button {
+    font-size: 20px;
+    width: 150px;
+    height: 50px; }
+
+  #game {
+    margin-top: 5vh;
+    width: 512px;
+    height: 512px;
+    border-radius: 100vh; }
+    #game div {
+      width: 254px;
+      height: 254px; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -128px; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -128px; }
+
+  #centerDisk {
+    width: 256px;
+    height: 256px;
+    border-radius: 50vw;
+    font-size: 60pt;
+    padding-top: 64px;
+    margin: -128px auto 0 auto; }
+
+  #footer {
+    padding-top: 10pt;
+    font-size: 30px; } }
+@media only screen and (min-width: 1420px) {
+  #button {
+    font-size: 20px; }
+
+  #game {
+    margin-top: 5vh;
+    width: 512px;
+    height: 512px;
+    border-radius: 100vh; }
+    #game div {
+      width: 254px;
+      height: 254px; }
+    #game #color1 {
+      border-radius: 50vw 0 0 0; }
+    #game #color2 {
+      border-radius: 0 50vw 0 0; }
+    #game #color3 {
+      border-radius: 0 0 50vw 0;
+      margin-top: -128px; }
+    #game #color4 {
+      border-radius: 0 0 0 50vw;
+      margin-top: -128px; }
+
+  #centerDisk {
+    width: 256px;
+    height: 256px;
+    border-radius: 50vw;
+    font-size: 60pt;
+    padding-top: 64px;
+    margin: -128px auto 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
