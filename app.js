@@ -6,22 +6,15 @@ var main = function() {
 	        "\n2. Repeat the pattern to advance to the next level." +
 	        "\nEnjoy!");
 
-	function playSound1() {
-		var sound1 = new Audio("./Sounds/simonSound1.mp3");
-		sound1.play();
-	}
-	function playSound2() {
-		var sound2 = new Audio("./Sounds/simonSound2.mp3");
-		sound2.play();
-	}
-	function playSound3() {
-		var sound3 = new Audio("./Sounds/simonSound3.mp3");
-		sound3.play();
-	}
-	function playSound4() {
-		var sound4 = new Audio("./Sounds/simonSound4.mp3");
-		sound4.play();
-	}
+	var sound1 = new Audio("./Sounds/simonSound1.mp3");
+	var sound2 = new Audio("./Sounds/simonSound2.mp3");
+	var sound3 = new Audio("./Sounds/simonSound3.mp3");
+	var sound4 = new Audio("./Sounds/simonSound4.mp3");
+
+	function playSound1() {sound1.play();}
+	function playSound2() {sound2.play();}
+	function playSound3() {sound3.play();}
+	function playSound4() {sound4.play();}
 
 	var gameStatus = 0;
 	var generatedPattern = [];
