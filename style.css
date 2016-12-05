@@ -7,6 +7,7 @@ body, html {
   height: 40px;
   display: block;
   margin: 0 auto;
+  font-family: 'Play';
   text-align: center;
   color: white;
   padding-top: 10px;
@@ -89,7 +90,8 @@ body, html {
     text-decoration: none; }
 
 span {
-  color: #e74c3c; }
+  color: #e74c3c;
+  text-shadow: 0px 0px 20px white; }
 
 @media only screen and (min-width: 320px) {
   #button {
